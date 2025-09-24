@@ -1,0 +1,518 @@
+/* style.css - Remake: Teks dan Border Lebih Kecil, Presisi, dan Border Menyeluruh Kotak (LAPORAN PENAHANAN: Teks Hitam Tanpa Border) */
+
+/* Reset dasar untuk konsistensi dan presisi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gainsboro;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.4;
+    font-size: 14px; /* Teks body lebih kecil untuk presisi */
+    border: 1px solid #000; /* Border menyeluruh tipis sekeliling seluruh halaman (frame utama) */
+    min-height: 100vh;
+    padding: 10px; /* Padding ringan untuk border body */
+    margin: 0 auto;
+    max-width: 1200px; /* Batasi lebar halaman untuk presisi */
+}
+
+/* Title Box - Lebih kecil dan presisi, selaras dengan font tegas, border menyeluruh */
+.title-box {
+    border: 2px double #000; /* Border lebih kecil (dari 4px ke 2px) */
+    padding: 8px; /* Padding lebih kecil */
+    margin: 10px auto; /* Margin vertikal lebih kecil, center horizontal */
+    max-width: 400px;
+    text-align: center;
+    background-color: peachpuff;
+    border-radius: 4px; /* Sudut melengkung ringan untuk presisi */
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: bold;
+    color: #333;
+    font-size: 18px; /* Teks title lebih kecil tapi tegas */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Shadow ringan untuk efek kotak menyeluruh */
+}
+
+/* Styling untuk paragraf "Note" - Lebih kecil dan presisi, border menyeluruh */
+p.note {
+    width: 80%;
+    padding: 6px; /* Padding lebih kecil */
+    margin: 8px auto; /* Margin lebih kecil */
+    background-color: red;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 2px double #000; /* Border lebih kecil */
+    cursor: pointer;
+    font-size: 12px; /* Teks lebih kecil */
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Shadow untuk efek menyeluruh */
+}
+
+/* Styling untuk paragraf "DEV BY" - Lebih kecil dan presisi, border menyeluruh */
+p.dev {
+    width: 80%;
+    padding: 6px;
+    margin: 8px auto;
+    background-color: greenyellow;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 2px double #000;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk paragraf "SUPPORT BY" - Lebih kecil dan presisi, border menyeluruh */
+p.support {
+    width: 80%;
+    padding: 6px;
+    margin: 8px auto;
+    background-color: beige;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 2px double #000;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group - Presisi dengan margin kecil */
+.form-group {
+    margin-bottom: 10px; /* Margin lebih kecil */
+}
+
+/* Label - Selaras dengan title, font bold */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px; /* Margin kecil */
+    font-size: 13px; /* Teks label kecil */
+    font-family: Arial, sans-serif;
+}
+
+/* Input dan Textarea - Border lebih kecil dan presisi */
+input, textarea {
+    width: 100%;
+    padding: 6px; /* Padding lebih kecil */
+    border: 2px double #000; /* Border lebih kecil */
+    border-radius: 4px;
+    font-size: 13px; /* Teks input kecil */
+    font-family: Arial, sans-serif;
+}
+
+/* Form Container - Lebih kecil dan presisi, border menyeluruh lengkap */
+.form-container {
+    width: 400px;
+    margin: 15px auto; /* Margin vertikal lebih kecil */
+    padding: 15px; /* Padding lebih kecil */
+    border: 3px double #000; /* Border lebih tebal untuk menyeluruh */
+    background-color: aliceblue;
+    text-align: left;
+    border-radius: 6px; /* Radius lebih kecil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow lebih kuat untuk efek kotak */
+    position: relative; /* Untuk border menyeluruh */
+}
+
+.form-container::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 1px solid #333; /* Border luar tipis untuk efek menyeluruh ganda */
+    border-radius: 9px;
+    z-index: -1;
+}
+
+/* Tabel - Border lebih kecil, presisi, dan MENYELURUH (kotak utuh) */
+table {
+    width: 100%;
+    margin: 15px 0; /* Margin lebih kecil */
+    border: 3px double #000; /* Border luar lebih tebal untuk menyeluruh */
+    background-color: azure;
+    border-collapse: separate; /* Ubah ke separate untuk border menyeluruh tanpa celah */
+    border-spacing: 0; /* No spacing agar kotak rapat */
+    border-radius: 6px; /* Radius untuk sudut kotak */
+    overflow: hidden; /* Untuk radius presisi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow untuk efek kotak 3D */
+}
+
+th, td {
+    border: 2px double #000; /* Border pada semua sisi untuk menyeluruh (atas, bawah, kiri, kanan) */
+    padding: 6px; /* Padding lebih kecil */
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Arial Black", Gadget, sans-serif; /* Font tegas seperti title */
+    font-weight: bold; /* Bold untuk presisi */
+    font-size: 12px; /* Teks tabel kecil */
+}
+
+th {
+    background-color: pink;
+    width: 120px; /* Lebar lebih presisi (dari 150px) */
+    height: 30px; /* Tinggi lebih kecil (dari 50px) */
+}
+
+td {
+    width: auto; /* Biarkan otomatis untuk presisi */
+    height: 25px; /* Tinggi lebih kecil (dari 3px yang salah) */
+    padding: 4px; /* Padding lebih kecil */
+}
+
+/* Garis horizontal menyeluruh pada tr untuk kotak tabel lebih kuat */
+tr {
+    border-left: 2px double #000; /* Border kiri pada tr untuk lengkap */
+    border-right: 2px double #000; /* Border kanan pada tr untuk lengkap */
+}
+
+tr td:first-child {
+    border-left: 2px double #000; /* Pastikan border kiri pada td pertama */
+}
+
+tr td:last-child {
+    border-right: 2px double #000; /* Pastikan border kanan pada td terakhir */
+}
+
+/* CSS untuk pasal yang dilanggar (.sedang) - Lebih kecil dan presisi, border menyeluruh */
+.sedang {
+    text-align: center;
+    background-color: orange;
+    padding: 10px; /* Padding lebih kecil (dari 20px) */
+    font-size: 16px; /* Font lebih kecil (dari 20px) */
+    font-weight: bold;
+    border: 2px double #000; /* Border lebih kecil */
+    margin: 10px 0; /* Margin kecil */
+    border-radius: 4px;
+    font-family: "Arial Black", Gadget, sans-serif; /* Selaras dengan title */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Shadow untuk efek menyeluruh */
+}
+
+/* Sedang2 (header tabel) - Presisi, border menyeluruh */
+.sedang2 {
+    background-color: orange;
+    font-weight: bold;
+    font-size: 14px;
+    border: 2px double #000; /* Tambah border untuk header */
+}
+
+/* Container Total Hukuman - Lebih kecil dan presisi, border menyeluruh lengkap */
+.total-hukuman-container {
+    width: 90%;
+    padding: 8px; /* Padding lebih kecil (dari 5px/15px) */
+    margin: 10px auto; /* Center dan margin kecil */
+    background-color: cyan;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 3px double #000; /* Border lebih tebal untuk menyeluruh */
+    border-radius: 6px; /* Radius kecil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow lebih kuat untuk efek kotak */
+    font-family: "Arial Black", Gadget, sans-serif; /* Selaras dengan title */
+    font-size: 13px;
+    position: relative;
+}
+
+.total-hukuman-container::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 1px solid #333; /* Border luar tipis untuk efek ganda */
+    border-radius: 9px;
+    z-index: -1;
+}
+
+.total-hukuman-container h3 {
+    margin-bottom: 8px; /* Margin kecil */
+    font-size: 1.4rem; /* Lebih kecil (dari 1.9rem) */
+    color: crimson;
+}
+
+.total-hukuman-container h6 {
+    margin: 2px 0; /* Margin sangat kecil */
+    font-size: 0.9rem; /* Lebih kecil (dari 0.8rem) */
+    color: #333;
+}
+
+/* Total Penjara - Konsisten dengan total-hukuman, border menyeluruh */
+.total-penjara {
+    width: 90%;
+    padding: 8px;
+    margin: 10px auto;
+    background-color: cyan;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 3px double #000; /* Border lebih tebal */
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+    position: relative;
+}
+
+.total-penjara::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 1px solid #333;
+    border-radius: 9px;
+    z-index: -1;
+}
+
+/* History - Lebih kecil dan presisi, border menyeluruh lengkap */
+#history {
+    max-width: 800px;
+    margin: 15px auto; /* Margin kecil */
+    padding: 15px; /* Padding kecil */
+    background-color: bisque;
+    border: 3px double #000; /* Border lebih tebal untuk menyeluruh */
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow lebih kuat */
+    position: relative;
+}
+
+#history::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 1px solid #333; /* Border luar tipis */
+    border-radius: 9px;
+    z-index: -1;
+}
+
+#history h3 {
+    text-align: center;
+    font-size: 0.9rem; /* Lebih kecil (dari 1rem) */
+    color: #000; /* PERUBAHAN: Teks saja yang hitam (tanpa background atau border) */
+    margin-bottom: 8px;
+    padding: 6px; /* Padding ringan untuk presisi (tanpa border) */
+    font-family: "Arial Black", Gadget, sans-serif; /* Font tegas selaras dengan title */
+    font-weight: bold;
+    /* Tidak ada background, border, atau shadow tambahan - sederhana seperti teks biasa tapi hitam */
+}
+
+#history p {
+    font-size: 0.7rem; /* Lebih kecil (dari 0.8rem) */
+    line-height: 1.2; /* Line-height presisi */
+    margin: 3px 0; /* Margin sangat kecil */
+}
+
+/* H5 untuk BOX LAPORAN PELAKU / LAPORAN PENAHANAN - Lebih kecil, border menyeluruh, WARNA HITAM */
+h5 {
+    width: 100%;
+    padding: 6px; /* Padding kecil */
+    margin: 10px 0; /* Margin kecil */
+    background-color: #000; /* Ubah ke hitam (#000) */
+    color: #FFF; /* Teks putih untuk kontras agar terbaca */
+    text-align: center;
+    font-weight: bold;
+    border: 2px double #FFF; /* Border double putih untuk kontras dengan background hitam */
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    font-family: "Arial Black", Gadget, sans-serif; /* Selaras dengan title */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); /* Shadow lebih gelap untuk efek menyeluruh pada background hitam */
+}
+
+/* Tombol - Lebih kecil dan presisi, border menyeluruh */
+button {
+    width: 100%;
+    padding: 8px; /* Padding kecil (dari 10px) */
+    margin: 10px 0; /* Margin kecil */
+    background-color: greenyellow;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 2px double #000; /* Border kecil */
+    cursor: pointer;
+    font-size: 13px; /* Teks tombol kecil */
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Shadow untuk efek menyeluruh */
+}
+
+button:hover {
+    background-color: darkgray;
+    transition: background-color 0.3s ease; /* Transisi halus untuk presisi */
+}
+
+button1 {
+    width: 100%;
+    padding: 8px; /* Padding kecil (dari 10px) */
+    margin: 10px 0; /* Margin kecil */
+    background-color: gold;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    border: 2px double #000; /* Border kecil */
+    cursor: pointer;
+    font-size: 13px; /* Teks tombol kecil */
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Shadow untuk efek menyeluruh */
+}
+
+button:hover {
+    background-color: red;
+    transition: background-color 0.3s ease; /* Transisi halus untuk presisi */
+}
+
+/* Heading Umum - Selaras dengan title */
+h3, h6 {
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-weight: bold;
+}
+
+/* Tr dan Td tambahan untuk presisi tabel */
+tr {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Responsif untuk Mobile - Pastikan presisi di layar kecil, border tetap menyeluruh */
+@media (max-width: 768px) {
+    body {
+        border-width: 0.5px; /* Border body lebih tipis di mobile */
+        padding: 5px;
+    }
+    
+    .form-container {
+        width: 95%;
+        padding: 12px;
+    }
+    
+    table {
+        font-size: 11px; /* Teks tabel lebih kecil di mobile */
+        border-width: 2px; /* Border tabel sedikit lebih tipis */
+    }
+    
+    th, td {
+        padding: 4px;
+        border-width: 1.5px; /* Border sel lebih tipis di mobile */
+    }
+    
+    .title-box {
+        max-width: 95%;
+        font-size: 16px;
+    }
+    
+    .total-hukuman-container, #history, .form-container {
+        border-width: 2px; /* Border containers lebih tipis di mobile */
+    }
+    
+    h5 {
+        border-width: 1.5px; /* Border h5 lebih tipis di mobile untuk presisi */
+    }
+    
+    #history h3 {
+        font-size: 0.8rem; /* Ukuran teks hitam lebih kecil di mobile */
+        padding: 4px; /* Padding lebih ringan di mobile */
+    }
+}
+
+h4 {
+  font-size: 12px; /* ukuran teks tabel */
+}
+/* Background gelap transparan */
+.popup {
+  display: none; /* default hidden */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* layer gelap */
+}
+
+/* Box popup */
+.popup-content {
+  background: #fff;
+  color: #333;
+  margin: 15% auto;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.popup-content p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.popup-content button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  background: green;
+  color: #fff;
+  cursor: pointer;
+}
+.popup-content button:hover {
+  background: darkgreen;
+}
+
+#loadingOverlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 80px; height: 80px;
+  animation: spin 1s linear infinite;
+  margin: 100px auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Style untuk preview gambar */
+#previewKTP, #previewBarang {
+  max-width: 200px;
+  max-height: 200px;
+  margin-top: 10px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  display: none; /* default sembunyi sampai ada file */
+  object-fit: cover; /* biar foto gak ketarik aneh */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#previewKTP:hover, #previewBarang:hover {
+  transform: scale(1.05);
+  border-color: dodgerblue;
+}
